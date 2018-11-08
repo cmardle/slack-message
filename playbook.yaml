@@ -1,0 +1,10 @@
+---
+  - hosts: localhost
+    connection: local
+    tasks:
+
+    - name: Send notification message via Slack (slack module method)
+      slack:
+        token: "{{ API_token }}"
+        channel: "{{ slack_channel }}"
+        msg: "{{ message }}"
